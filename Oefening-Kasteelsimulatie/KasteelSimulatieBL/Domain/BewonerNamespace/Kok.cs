@@ -9,6 +9,6 @@ namespace KasteelSimulatieBL.Domain.BewonerNamespace {
             Specialiteit = specialiteit;
         }
 
-        public string Specialiteit { get; set; }
+        public string Specialiteit { get; init; }
     }
 }

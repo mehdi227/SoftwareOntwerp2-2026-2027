@@ -9,7 +9,7 @@ namespace KasteelSimulatieBL.Domain.BewonerNamespace {
             : base(naam) {
             ZwaardLengte = zwaardLengte;
         }
-        public int ZwaardLengte { get; set; }
+        public int ZwaardLengte { get; init; }
         public void Strijd() {
             Console.WriteLine($"{Naam} trekt een zwaard.");
         }

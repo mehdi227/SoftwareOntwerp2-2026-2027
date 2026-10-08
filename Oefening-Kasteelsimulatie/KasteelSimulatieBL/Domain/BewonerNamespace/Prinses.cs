@@ -9,6 +9,6 @@ namespace KasteelSimulatieBL.Domain.BewonerNamespace {
             Beschrijving = beschrijving;
         }
 
-        public string Beschrijving { get; set; }
+        public string Beschrijving { get; init; }
     }
 }

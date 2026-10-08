@@ -8,7 +8,7 @@ namespace KasteelSimulatieBL.Domain.BewonerNamespace {
             Naam = naam;
         }
 
-        public string Naam { get; set; }
+        public string Naam { get; init; }
 
     }
 }
