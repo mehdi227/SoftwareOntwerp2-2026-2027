@@ -1,4 +1,5 @@
 ﻿using BuildingBlocks.ValueObjects;
+using KasteelSimulatieBL.Domain.BewonerNamespace;
 
 namespace KasteelSimulatieBL.Domain {
     public class Raster {
@@ -38,6 +39,11 @@ namespace KasteelSimulatieBL.Domain {
                 }
             }
             return null;
+        }
+        public bool IsKasteelBewoond(int x, int y) {
+            return _kastelen.Single(kasteel =>
+                kasteel.Positie.X == x && kasteel.Positie.Y == y)
+                .IsBewoond();
         }
     }
 }
