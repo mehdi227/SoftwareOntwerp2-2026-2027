@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using BuildingBlocks.ValueObjects;
 
 namespace KasteelSimulatieBL.Domain {
     public class Raster {
@@ -11,7 +9,7 @@ namespace KasteelSimulatieBL.Domain {
 
         public int Breedte { get; init; }
         public int Hoogte { get; init; }
-        private readonly List<Kasteel> _kastelen;
+        private readonly List<Kasteel> _kastelen = new();
         public IReadOnlyList<Kasteel> Kastelen => _kastelen.AsReadOnly();
 
         public void VoegKasteelToe(Kasteel kasteel) {
@@ -32,6 +30,14 @@ namespace KasteelSimulatieBL.Domain {
             && coordinaat.X < Breedte
             && coordinaat.Y >= 0
             && coordinaat.Y < Hoogte;
+        }
+        public Kasteel ZoekKasteelOp(Coordinaat positie) {
+            foreach (Kasteel kasteel in Kastelen) {
+                if (kasteel.Positie == positie) {
+                    return kasteel;
+                }
+            }
+            return null;
         }
     }
 }

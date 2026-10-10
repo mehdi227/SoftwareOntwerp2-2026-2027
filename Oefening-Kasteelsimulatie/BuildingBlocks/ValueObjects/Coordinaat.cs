@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Text;
 
-namespace KasteelSimulatieBL.Domain {
-    public class Coordinaat {
-
+namespace BuildingBlocks.ValueObjects {
+    public record Coordinaat {
         public int X { get; init; }
         public int Y { get; init; }
 

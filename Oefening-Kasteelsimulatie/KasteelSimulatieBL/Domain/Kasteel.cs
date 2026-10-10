@@ -1,6 +1,7 @@
 ﻿using KasteelSimulatieBL.Domain.BewonerNamespace;
 using KasteelSimulatieBL.Interfaces;
 using System.Drawing;
+using BuildingBlocks.ValueObjects;
 
 namespace KasteelSimulatieBL.Domain; 
 public class Kasteel {
@@ -22,7 +23,7 @@ public class Kasteel {
         ArgumentNullException.ThrowIfNull(prinses);
         Prinses = prinses;
     }
-    private readonly List<Bewoner> _bewoners;
+    private readonly List<Bewoner> _bewoners = new();
     public IReadOnlyList<Bewoner> Bewoners => _bewoners.AsReadOnly();
 
     public void VoegBewonerToe(Bewoner bewoner) {

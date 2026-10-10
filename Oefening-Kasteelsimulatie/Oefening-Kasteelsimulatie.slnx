@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="BuildingBlocks/BuildingBlocks.csproj" Id="f07000f0-26dd-4acf-ad0c-d28d11bce627" />
   <Project Path="KasteelSimulatieBL/KasteelSimulatieBL.csproj" />
   <Project Path="KasteelSimulatieConsoleApp/KasteelSimulatieConsoleApp.csproj" />
 </Solution>
